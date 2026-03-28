@@ -1,4 +1,6 @@
 from openai import OpenAI
+from rich import print
+
 client = OpenAI()
 
 response = client.responses.create(
