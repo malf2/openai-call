@@ -1,6 +1,10 @@
-def main():
-    print("Hello from openai-call!")
+from openai import OpenAI
+client = OpenAI()
 
+response = client.responses.create(
+    model="gpt-4o-mini",
+    input="Write a one-sentence bedtime story about a unicorn."
+)
 
-if __name__ == "__main__":
-    main()
+print(response.output_text)
+
